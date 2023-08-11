@@ -1,0 +1,34 @@
+@mixin rotation0To180Deg {
+  transition: all 300ms ease-in-out;
+  transform: rotate(180deg);
+}
+
+@mixin rotation180To0Deg {
+  transition: all 300ms ease-in-out;
+  transform: rotate(0deg);
+}
+
+@mixin descending {
+  animation: descending 0.3s linear forwards;
+}
+
+@keyframes descending {
+  0% {
+    transform: translatey(-20px);
+  }
+
+  100% {
+    transform: translatey(0);
+  }
+}
+
+@mixin underlineLink {
+  transform: translateX(-50%);
+  animation: underlineLink 0.3s ease forwards;
+}
+
+@keyframes underlineLink {
+  to {
+    width: 100%;
+  }
+}

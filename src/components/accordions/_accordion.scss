@@ -1,0 +1,150 @@
+.accordionSection {
+  border-radius: 10px;
+  padding: 0;
+  margin: 0px 0px 38px 0px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 76px;
+  position: relative;
+
+  @include desktop {
+    gap: 40px;
+  }
+
+  @include tab {
+    flex-wrap: wrap;
+    margin: 0px 0px 27px 0px;
+    gap: 30px;
+  }
+
+  @include phone {
+    margin: 0px 0px 19px 0px;
+    gap: 20px;
+  }
+
+  .accordionBody {
+    width: 80%;
+    @include flex-column-justify-center;
+    gap: 30px;
+
+    @include tab {
+      width: 100%;
+      gap: 25px;
+    }
+
+    @include phone {
+      gap: 20px;
+    }
+
+    .accordion-item {
+      width: 100%;
+      top: 0px;
+
+      .accordion-title {
+        z-index: 2;
+        height: 52px;
+        @include flex-items-center;
+        justify-content: space-between;
+        background-color: $primary-color;
+        border-radius: 10px;
+        color: white;
+        font-size: 24px;
+        font-weight: 500;
+        padding: 10px;
+
+        @include desktop {
+          font-size: 18px;
+        }
+
+        @include tab {
+          font-size: 16px;
+        }
+
+        @include phone {
+          height: 30px;
+          font-size: 13px;
+        }
+
+        .arrow {
+          width: 20px;
+          height: 20px;
+          @include rotation0To180Deg;
+        }
+
+        .rotated {
+          width: 20px;
+          height: 20px;
+          @include rotation180To0Deg;
+        }
+      }
+
+      .accordion-content {
+        display: none;
+        position: relative;
+        top: -30px;
+      }
+
+      .accordion-content-active {
+        display: block;
+        overflow: hidden;
+        z-index: -2;
+        background-color: $card-color;
+        border-radius: 0px 0px 10px 10px;
+        color: $primary-color;
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 25px;
+        padding: 40px 20px;
+        position: relative;
+        top: -10px;
+        @include descending;
+
+        @include desktop {
+          font-size: 18px;
+        }
+
+        @include tab {
+          font-size: 16px;
+          padding: 30px 20px;
+        }
+
+        @include phone {
+          font-size: 13px;
+        }
+
+        ul {
+          padding: 10px 0px 20px 0px;
+          @include flex-column;
+
+          @include phone {
+            padding: 0px 0px 10px 0px;
+          }
+
+          li {
+            margin-bottom: -15px;
+            font-size: 24px;
+            font-weight: 500;
+            color: $primary-color;
+            line-height: 0;
+            text-align: left;
+
+            @include desktop {
+              font-size: 18px;
+              margin-bottom: -20px;
+            }
+
+            @include tab {
+              font-size: 16px;
+            }
+
+            @include phone {
+              font-size: 13px;
+              margin-bottom: 0px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

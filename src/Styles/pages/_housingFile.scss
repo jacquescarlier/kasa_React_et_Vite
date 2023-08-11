@@ -1,0 +1,137 @@
+.title {
+  @include flex-row;
+  justify-content: normal;
+  justify-content: space-between;
+ @include wrap;
+  width: 100%;
+  color: #ff6060;
+  padding: 0px 0px 20px 0px;
+
+  @include tab {
+    width: 100%;
+  }
+}
+
+.titleInfo {
+  width: 70%;
+  padding: 0 0 15px 0;
+
+  @include tab {
+    width: 100%;
+    font-size: 16px;
+  }
+
+  h1 {
+    font-size: 36px;
+    font-weight: 500;
+    line-height: 51px;
+    padding-bottom: 10px;
+
+    @include phone {
+      font-size: 18px;
+      line-height: 25px;
+    }
+  }
+
+  p {
+    font-size: 18px;
+    font-weight: 500;
+
+    @include tab {
+      font-size: 16px;
+    }
+
+    @include phone {
+      font-size: 14px;
+    }
+  }
+}
+
+.title img {
+  border-radius: 50%;
+  object-fit: cover;
+  width: 64px;
+
+  @include tab {
+    width: 48px;
+  }
+
+  @include phone {
+    width: 32px;
+  }
+}
+
+.titleName {
+  @include flex-row;
+  justify-content: normal;
+  height: 64px;
+  align-items: center;
+
+  @include tab {
+    order: 4;
+    min-width: auto;
+    height: 48px;
+  }
+
+  @include tab {
+    height: 32px;
+  }
+}
+
+.titleName p {
+  font-size: 18px;
+  padding: 0;
+  margin-right: 10px;
+  text-align: right;
+  width: 93px;
+
+  @include tab {
+    width: 75px;
+    font-size: 16px;
+  }
+
+  @include phone {
+    width: 50px;
+    font-size: 12px;
+  }
+}
+
+.housingDetail {
+  @include flex-row;
+  @include nowrap;
+  justify-content: normal;
+  justify-content: space-between;
+  width: 70%;
+
+  @include tab {
+    width: 100%;
+    padding: 20px 0;
+  }
+}
+
+.housingInformation {
+  @include flex-row;
+  @include wrap;
+  align-items: center;
+  gap: 15px;
+}
+
+.housingDetail p {
+  height: 25px;
+  color: $neutral-color;
+  background-color: $primary-color;
+  padding: 3px 30px 2px 30px;
+  border-radius: 20px;
+  display: block;
+  font-size: 14px;
+  font-weight: 500;
+
+  @include tab {
+    font-size: 12px;
+  }
+
+  @include phone {
+    font-size: 10px;
+    padding: 5px 10px;
+  }
+}

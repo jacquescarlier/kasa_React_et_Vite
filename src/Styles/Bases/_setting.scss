@@ -1,0 +1,26 @@
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: #ffffff;
+  font-family: "Montserrat", sans-serif;
+  margin: auto;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
+.container-general {
+  width: 100%;
+  max-width: 1900px;
+  margin: auto;
+  padding: 45px 6.95% 0px 6.95%;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+
+  @include desktop-large {
+    padding: 45px 6.5% 0px 6.5%;
+  }
+
+  @include phone {
+    padding: 20px 5.35% 0px 5.35%;
+  }
+}

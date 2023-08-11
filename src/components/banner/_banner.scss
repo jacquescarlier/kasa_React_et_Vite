@@ -1,0 +1,63 @@
+.image-banner {
+  padding: 0;
+  position: relative;
+  margin-bottom: 38px;
+
+  .banner-text {
+    width: 100%;
+    position: absolute;
+    bottom: 50%;
+    transform: translatey(50%);
+    color: $neutral-color;
+    font-size: 48px;
+    font-weight: 500;
+    margin: 0;
+    text-align: center;
+    @include flex-row;
+    @include flex-justify-items-center;
+    gap: 5px;
+
+    @include desktop {
+      font-size: 42px;
+    }
+
+    @include tab {
+      font-size: 30px;
+    }
+
+    @include phone {
+      padding: 0;
+      margin: 0;
+      width: 100%;
+      font-size: 24px;
+      text-align: left;
+      padding: 16px;
+      flex-flow: column nowrap;
+      align-items: flex-start;
+    }
+  }
+}
+
+.banner-home img {
+  height: 223px;
+  width: 100%;
+  border-radius: 25px;
+  object-fit: cover;
+  filter: brightness(0.6);
+
+  @include tab {
+    height: 176px;
+  }
+
+  @include phone {
+    height: 111px;
+  }
+}
+
+.banner-about img {
+  height: 223px;
+  width: 100%;
+  border-radius: 25px;
+  object-fit: cover;
+  filter: brightness(0.6);
+}

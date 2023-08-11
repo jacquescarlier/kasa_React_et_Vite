@@ -1,0 +1,32 @@
+.header {
+  height: 68px;
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  margin-bottom: 38px;
+  @include phone {
+    height: 57px;
+    margin-bottom: 19px;
+  }
+
+  img {
+    height: 68px;
+    width: 210px;
+    object-fit: contain;
+    padding: 5px;
+    align-items: center;
+
+    @include phone {
+      height: 57px;
+      width: 145px;
+    }
+  }
+
+  .navigation {
+    padding: 20px 0px;
+
+    @include phone {
+      padding: 10px 0px;
+    }
+  }
+}

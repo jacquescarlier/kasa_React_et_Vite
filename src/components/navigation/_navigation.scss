@@ -1,0 +1,46 @@
+ul {
+  display: flex;
+  gap: 57px;
+  list-style: none;
+
+  @include phone {
+    gap: 26px;
+  }
+
+  li {
+    color: #ff6080;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 34px;
+    text-align: right;
+
+    @include tab {
+      font-size: 16px;
+    }
+
+    @include phone {
+      font-size: 12px;
+    }
+  }
+
+  a {
+    text-decoration: none;
+    /*padding-right: 10px;*/
+  }
+}
+
+.nav-active {
+  position: relative;
+
+  &::after {
+    content: "";
+    height: 2px;
+    width: 0;
+    background: $primary-color;
+    border-radius: 10px;
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    @include underlineLink;
+  }
+}
