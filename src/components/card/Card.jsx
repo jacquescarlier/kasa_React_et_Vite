@@ -2,6 +2,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 
+const urlApi = "/logements.json"
+
 function Card() {
 
   const [logements, setLogements] = useState(null);
@@ -9,7 +11,7 @@ function Card() {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    fetch("/logements.json")
+    fetch(urlApi)
       .then((response) => {
         if (response.ok) {
           return response.json();
