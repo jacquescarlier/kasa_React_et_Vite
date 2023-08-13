@@ -2,10 +2,9 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 
-const urlApi = "logements.json"
+const urlApi = "./public/logements.json"
 
 function Card() {
-
   const [logements, setLogements] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -20,7 +19,6 @@ function Card() {
       })
       .then((logements) => {
         setLogements(logements)
-        console.log("json", logements)
       })
       .catch((error) => {
         console.error("error fetching", error);
@@ -33,7 +31,6 @@ function Card() {
   }, []);
   if (loading) return "Loading ....";
   if (error) return "Error ! ";
-
 
   return (
     <div className="card-style">

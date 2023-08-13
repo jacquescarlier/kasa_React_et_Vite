@@ -14,8 +14,6 @@ export default function Fetch() {
     const [logements, setLogements] = useState(null);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
-
-    console.log("id", id)
     useEffect(() => {
         fetch(urlApi)
             .then((response) => {
@@ -26,7 +24,6 @@ export default function Fetch() {
             })
             .then((logements) => {
                 setLogements(logements)
-                console.log("json", logements)
             })
             .catch((error) => {
                 console.error("error fetching", error);
@@ -40,7 +37,6 @@ export default function Fetch() {
     if (loading) return "Loading ....";
     if (error) return "Error ! ";
     
-    console.log("logements", logements)
     const logement = logements.find((item) => item.id === id)
 
     return (
