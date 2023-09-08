@@ -1,8 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
-
-const urlApi = "./public/logements.json"
+const urlApi = "logements.json"
 
 function Card() {
   const [logements, setLogements] = useState(null);
