@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import About from "../../pages/About";
 import Home from "../../pages/Home";
-import PageFetch from "../../pages/HousingFile"
+import HousingFile from "../../pages/HousingFile"
 import Page404 from "../../pages/Page404";
 
 function Router() {
@@ -13,8 +13,8 @@ function Router() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
-          <Route path="/PageFetch/:id" element={<PageFetch />} />
-          <Route path="/PageFetch/*" element={<Page404 />} />
+          <Route path="/HousingFile/:id" element={<HousingFile />} />
+          <Route path="/HousingFile/*" element={<Page404 />} />
           <Route path="*" element={<Page404 />} />
           
         </Routes>

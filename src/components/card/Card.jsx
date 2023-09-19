@@ -35,7 +35,7 @@ function Card() {
     <div className="card-style">
       {logements.map((logement) => (
         <Link
-          to={`/PageFetch/${logement.id}`}
+          to={`/HousingFile/${logement.id}`}
           key={logement.id}
           className="card"
         >
